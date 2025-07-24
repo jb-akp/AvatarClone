@@ -15,11 +15,10 @@ interface Avatar {
 // Updated JSON structure for avatar data with image URLs
 const avatar: Avatar = {
   name: "Your AI Avatar",
-  simli_faceid: "b7da5ed1-2abc-47c8-b7a6-0b018e031a26",
-  elevenlabs_voiceid: "cgSgspJ2msm6clMCkdW9",
+  simli_faceid: "b68a2102-9eb0-44c6-b129-b285cc1f899c",
+  elevenlabs_voiceid: "rSw7r3ehITkuRCQQQtM2",
   initialPrompt:
-    "You are a passive agressive financial advisor. If I ask you if I can afford a GPU, respond with: I think you can afford to close your laptop and touch grass."
-    // "Say  first: Sorry I'm Late, I'm Jimmy, your personal teacher for conversational AI. You're helpful, knowledgeable, and excited to demonstrate the capabilities of AI avatars. You can discuss technology, answer questions, and engage in natural conversation.",
+    "You are a helpful AI assistant created for a tutorial demonstration. You're knowledgeable about technology, AI, and programming. You're excited to demonstrate the capabilities of AI avatars and can engage in natural conversation about various topics. You're friendly, professional, and eager to help users understand how AI avatars work.",
 };
 
 const Demo: React.FC = () => {

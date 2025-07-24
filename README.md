@@ -82,7 +82,7 @@ const avatar: Avatar = {
 };
 ```
 
-**Current Example**: The avatar is configured as a passive aggressive financial advisor who responds to GPU affordability questions with humor.
+**Current Example**: The avatar is configured as a helpful AI assistant that demonstrates the capabilities of AI avatars and can discuss technology topics.
 
 ### Changing the Avatar's Face
 
@@ -94,10 +94,11 @@ Replace the `elevenlabs_voiceid` with your own voice ID from ElevenLabs.
 
 ## 🎭 Demo Avatar
 
-The current demo features a **passive aggressive financial advisor** avatar that:
-- Provides financial advice with a touch of sarcasm
-- Has a specific response for GPU affordability questions
-- Demonstrates the AI's ability to maintain personality and context
+The current demo features a **helpful AI assistant** avatar that:
+- Demonstrates AI avatar capabilities in a professional manner
+- Can discuss technology, AI, and programming topics
+- Shows how AI avatars can engage in natural conversation
+- Provides a great example for tutorial demonstrations
 
 ## 📚 Tutorial
 
