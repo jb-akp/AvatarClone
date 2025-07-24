@@ -1,9 +1,23 @@
+import React from 'react';
 
-export default function VideoBox(props: any) {
-    return (
-        <div className="aspect-video flex items-center h-[350px] w-[350px] justify-center bg-simligray">
-            <video ref={props.video} autoPlay playsInline></video>
-            <audio ref={props.audio} autoPlay ></audio>
-        </div>
-    );
+interface VideoBoxProps {
+  video: React.RefObject<HTMLVideoElement>;
+  audio: React.RefObject<HTMLAudioElement>;
 }
+
+const VideoBox: React.FC<VideoBoxProps> = ({ video, audio }) => {
+  return (
+    <div className="relative w-full max-w-md mx-auto">
+      <video
+        ref={video}
+        className="w-full h-auto rounded-lg"
+        autoPlay
+        playsInline
+        muted
+      />
+      <audio ref={audio} autoPlay />
+    </div>
+  );
+};
+
+export default VideoBox; 

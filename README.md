@@ -1,40 +1,113 @@
-# Create Simli App
-This starter is an example of how to create a composable Simli interaction that runs in a Next.js app.
-The project consists of a Next.js app that uses the Simli SDK (`simli-client`) and a server `server.ts` that handles the interaction with other services such as speech-to-text (STT), large language models (LLMs) and text-to-speech (TTS). 
+# AI Avatar Tutorial - Turn Yourself into an AI Avatar
 
-### Environment variables
-Start by signing up and getting your API key from [Simli.com](https://www.simli.com/). Then, fill in the `.env` file in the root of the project and put in the following environment variables:
+Create your own AI avatar with real-time face tracking, voice synthesis, and conversational AI. This project demonstrates how to build an interactive AI avatar that can respond to your voice and mirror your facial expressions in real-time.
 
-```bash
-NEXT_PUBLIC_SIMLI_API_KEY="API key from simli.com"
-ELEVENLABS_API_KEY="Paid API key from elevenlabs.io (Free API key doesn't allow streaming audio)"
-DEEPGRAM_API_KEY="API key from deepgram.com"
-OPENAI_API_KEY="API key from OPENAI"
+## 🚀 Features
+
+- **Real-time Face Tracking**: Advanced facial recognition that captures your expressions
+- **Voice Synthesis**: Natural voice cloning that sounds exactly like you
+- **AI Conversation**: Intelligent responses powered by cutting-edge language models
+- **Real-time Processing**: Instant response with minimal latency for natural interaction
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 14, React, TypeScript
+- **AI Services**: 
+  - Simli AI (facial animation)
+  - ElevenLabs (voice synthesis)
+  - OpenAI (conversation)
+  - Deepgram (speech-to-text)
+- **Styling**: Tailwind CSS
+- **Real-time**: WebSocket connections
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following API keys:
+
+- **Simli AI API Key** (`NEXT_PUBLIC_SIMLI_API_KEY`)
+- **ElevenLabs API Key** (`ELEVENLABS_API_KEY`)
+- **OpenAI API Key** (`OPENAI_API_KEY`)
+- **Deepgram API Key** (`DEEPGRAM_API_KEY`)
+
+## 🚀 Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/jb-akp/AvatarClone.git
+   cd AvatarClone
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env` file in the root directory and add your API keys:
+   ```env
+   NEXT_PUBLIC_SIMLI_API_KEY=your_simli_api_key
+   ELEVENLABS_API_KEY=your_elevenlabs_api_key
+   OPENAI_API_KEY=your_openai_api_key
+   DEEPGRAM_API_KEY=your_deepgram_api_key
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run start
+   ```
+
+5. **Open your browser**
+   Navigate to `http://localhost:3000` and start your AI avatar interaction!
+
+## 🎯 How to Use
+
+1. Click the "Test Interaction" button to start
+2. Allow camera and microphone access when prompted
+3. Speak naturally - the AI will respond in real-time
+4. Your facial expressions will be mirrored by the avatar
+5. Click "Stop Interaction" when finished
+
+## 🔧 Customization
+
+### Changing the Avatar's Personality
+
+Edit the `initialPrompt` in `app/page.tsx`:
+
+```typescript
+const avatar: Avatar = {
+  name: "Your AI Avatar",
+  simli_faceid: "your_face_id",
+  elevenlabs_voiceid: "your_voice_id",
+  initialPrompt: "You are [your personality description here]...",
+};
 ```
 
-If you want to try Simli but don't have API access to these third parties, ask in Discord and we can help you out with that ([Discord Link](https://discord.gg/yQx49zNF4d)). 
+### Changing the Avatar's Face
 
-To run the back-end and front-end together, run the following command:
+Replace the `simli_faceid` with your own face ID from Simli AI.
 
+### Changing the Avatar's Voice
 
-```bash
-npm run start
-```
+Replace the `elevenlabs_voiceid` with your own voice ID from ElevenLabs.
 
-### Characters
-You can swap out the character by finding one that you like in the [docs](https://docs.simli.com/introduction), or [create your own](https://app.simli.com/) 
+## 📚 Tutorial
 
-![alt text](media/image.png) ![alt text](media/image-4.png) ![alt text](media/image-2.png) ![alt text](media/image-3.png) ![alt text](media/image-5.png) ![alt text](media/image-6.png)
+This project is designed to accompany the tutorial "Turn Yourself into an AI Avatar — Real Face, Real Voice, Real-Time." Follow along to learn how to:
 
-### Alternative STT, TTS and LLM providers 
-You can of course replace Deepgram and Elevenlabs with AI services with your own preference, or even build your own.
-The only requirement for Simli to work is that audio is sent using PCM16 format and 16KHz sample rate or sending it through MediaStream. If you're having trouble getting nice audio, feel free to ask for help in Discord.  
+- Set up the development environment
+- Configure AI services
+- Customize your avatar's personality
+- Deploy your AI avatar application
 
-## Links
-[\[Simli\]](https://simli.com)   [\[Elevenlabs\]](https://elevenlabs.io) [\[Deepgram\]](https://deepgram.com)
- [\[Groq\]](https://groq.com)
+## 🤝 Contributing
 
+Feel free to submit issues and enhancement requests!
 
-## Deploy on Vercel
+## 📄 License
 
-An easy way to deploy your avatar interaction to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme). 
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+Built with ❤️ for the AI community
+

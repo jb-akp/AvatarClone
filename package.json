@@ -1,6 +1,7 @@
 {
-  "name": "create-simli-app",
-  "version": "0.1.0",
+  "name": "ai-avatar-tutorial",
+  "version": "1.0.0",
+  "description": "Turn Yourself into an AI Avatar — Real Face, Real Voice, Real-Time",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -41,5 +42,16 @@
     "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
-  }
+  },
+  "keywords": [
+    "ai-avatar",
+    "face-tracking",
+    "voice-synthesis",
+    "real-time",
+    "tutorial",
+    "nextjs",
+    "react"
+  ],
+  "author": "Jimmy Bradford",
+  "license": "MIT"
 }

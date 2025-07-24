@@ -1,24 +1,14 @@
-import React from "react";
-import Image from "next/image";
-import cn from "@/app/utils/TailwindMergeAndClsx";
-import sparkle from "@/media/sparkle.svg";
+import React from 'react';
 
-interface Props {
+interface IconSparkleLoaderProps {
   className?: string;
-  isBlack?: boolean;
 }
 
-const IconSparkleLoader = ({ className, isBlack = false }: Props) => {
+const IconSparkleLoader: React.FC<IconSparkleLoaderProps> = ({ className = "" }) => {
   return (
-    <Image
-      src={sparkle}
-      alt="loader"
-      className={cn(
-        isBlack ? "filter invert" : "",
-        className
-      )}
-    />
+    <div className={`animate-spin rounded-full h-5 w-5 border-b-2 border-white ${className}`}>
+    </div>
   );
 };
 
-export default IconSparkleLoader;
+export default IconSparkleLoader; 
